@@ -1,44 +1,26 @@
 import React from "react";
 import "./Work.css";
+import { useSelector } from "react-redux";
 
-const myWork = [{
-  name: 'hopeless',
-  about: 'no no no no hope',
-  media: {
-    photo:"http://www.sergiumatis.com/_MG_9196%20%C2%A9%20Evgenia%20Chetvertkova%20small.jpg",
-    link:'http://www.sergiumatis.com/',
-  } }, {
-  name: 'hopeless',
-  about: 'no no no no hope',
-  media: {
-    photo:"http://www.sergiumatis.com/_MG_9196%20%C2%A9%20Evgenia%20Chetvertkova%20small.jpg",
-    link:'http://www.sergiumatis.com/',
-  } 
-},
-{
-  name: 'hopeless',
-  about: 'no no no no hope',
-  media: {
-    photo:"http://www.sergiumatis.com/_MG_9196%20%C2%A9%20Evgenia%20Chetvertkova%20small.jpg",
-    link:'http://www.sergiumatis.com/',
-  } 
-}
-]
- 
-   const Work = () => {
+const Work = () => {
+  const { work, error } = useSelector((state) => state.work);
+
   return (
     <div className="work-container">
-    {myWork.map( (m) => {
-      return <div id={m.id}>
-<h3>{m.name}</h3>
-<p>{m.about}</p>
-<img src={m.media.photo} alt={m.name}/>   
- <a href={m.media.link} target="_blank"  rel="noopener noreferrer">info____</a> 
-        </div> })}
-      
+      {work.map((m) => {
+        return (
+          <div key={m.id}>
+            <h3>{m.name}</h3>
+            <p>{m.about}</p>
+            <img src={m.media.photo} alt={m.name} />
+            <a href={m.media.link} target="_blank" rel="noopener noreferrer">
+              info____
+            </a>
+          </div>
+        );
+      })}
     </div>
   );
 };
 
-export default Work; 
- 
+export default Work;

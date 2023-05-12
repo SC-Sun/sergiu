@@ -1,33 +1,13 @@
 import React from "react";
 import "./Tours.css";
- 
-
-const tour = [
-  {
-    id: "1",
-    name: "hopeless",
-    date: "13.07.2024",
-    info: "https://www.google.com/",
-  },
-  {
-    id: "2",
-    name: "hopeless2",
-    date: "13.07.2024",
-    info: "https://www.google.com/",
-  },
-  {
-    id: "3",
-    name: "hopeles3",
-    date: "13.07.2024",
-    info: "https://www.google.com/",
-  },
-];
+import { useSelector } from "react-redux";
 
 const Tours = () => {
+const { tours, error } = useSelector((state) => state.tours);
   return (
     <div className="tours-container">
       <ul>
-        {tour.map((t) => {
+        {tours?.map((t) => {
           return (
             <li key={t.id}>
               <h2>{t.name}</h2>
