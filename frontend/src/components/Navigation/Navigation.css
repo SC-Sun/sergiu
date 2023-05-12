@@ -1,0 +1,26 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--greenGrey);
+}
+.list-container {
+  list-style: none;
+}
+.list {
+  padding: 0.3rem;
+}
+.listText {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.listText:hover {
+  color: var(--white);
+  font-size: 2.2rem;
+  text-shadow: 1px 1px var(--grey);
+  transition: ease-in-out 0.3s;
+  transform: scale(0.1);
+}

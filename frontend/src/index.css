@@ -1,0 +1,17 @@
+ html,
+ body,
+ #root {
+  height:100vh;
+  background-color:var(--greenGrey);
+   --black:rgba(5, 17, 17, 0.738);
+  --grey:#606470;
+  --white:#f9fbfc;  
+  --greenGrey:#79837f;
+  border-radius: 3px 3px;
+  font-family: 'Montserrat', sans-serif;
+  
+ }
+
+
+
+ 

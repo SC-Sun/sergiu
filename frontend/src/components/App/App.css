@@ -1,0 +1,54 @@
+.App {
+  padding: 10px;
+  height: 100vh;
+}
+
+.App-header {
+  color: var(--black);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-text {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--black);
+}
+.header-text:visited {
+  text-decoration: none;
+}
+.header-text:hover {
+  color: var(--white);
+  text-shadow: 1px 1px var(--grey);
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  flex: 50%;
+}
+
+.right {
+  flex: 50%;
+}
+
+.impressum-text{
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.impressum-text:visited {
+  text-decoration: none;
+}
+.impressum-text:hover {
+  color: var(--white);
+  text-shadow: 1px 1px var(--grey);
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
+}
