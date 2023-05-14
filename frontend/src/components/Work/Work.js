@@ -13,13 +13,16 @@ const Work = () => {
             <h2>{m.name}</h2>
             <p>{m.about}</p>
             <img src={m.media.photo} alt={m.name} />
-            <br/>
+            <br />
             <a href={m.media.link} target="_blank" rel="noopener noreferrer">
-              info____
+              <span>I</span>
+              <span>n</span>
+              <span>f</span>
+              <span classname="move">o</span>
             </a>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
           </div>
         );
       })}

@@ -10,10 +10,13 @@ const News = () => {
       {news?.map((u) => {
         return (
           <div key={u.id}>
-            <h3>{u.theme}</h3>
+            <h2>{u.theme}</h2>
             <p>{u.text}</p>
             <a href={u.info} target="_blank" rel="noopener noreferrer">
-              info____
+              <span>I</span>
+              <span>n</span>
+              <span>f</span>
+              <span classname="move">o</span>
             </a>
           </div>
         );
