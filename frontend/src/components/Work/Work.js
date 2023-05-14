@@ -9,13 +9,17 @@ const Work = () => {
     <div className="work-container">
       {work.map((m) => {
         return (
-          <div key={m.id}>
-            <h3>{m.name}</h3>
+          <div className="work-div" key={m.id}>
+            <h2>{m.name}</h2>
             <p>{m.about}</p>
             <img src={m.media.photo} alt={m.name} />
+            <br/>
             <a href={m.media.link} target="_blank" rel="noopener noreferrer">
               info____
             </a>
+            <br/>
+            <br/>
+            <br/>
           </div>
         );
       })}
