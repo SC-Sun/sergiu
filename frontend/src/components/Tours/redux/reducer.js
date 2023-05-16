@@ -5,26 +5,7 @@ import {
 } from "./constants";
 
 const initialState = {
-  tours: [
-    {
-      id: "1",
-      name: "hopeless",
-      date: "13.07.2024",
-      info: "https://www.google.com/",
-    },
-    {
-      id: "2",
-      name: "hopeless2",
-      date: "13.07.2024",
-      info: "https://www.google.com/",
-    },
-    {
-      id: "3",
-      name: "hopeles3",
-      date: "13.07.2024",
-      info: "https://www.google.com/",
-    },
-  ],
+  tours: [],
   loading: false,
   error: false,
 };
