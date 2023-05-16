@@ -19,6 +19,7 @@ app.get("/tours", (req, res) => {
       res.status(200).json(tour);
     })
     .catch((err) => {
+      console.log(res)
       console.log(err);
       res.status(500).json({ err: err });
     });
