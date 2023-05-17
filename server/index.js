@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const apiPort = 5000;
-// require database connection
 const dbConnect = require("./db/dbConnect");
 const Tours = require("./db/tourModel");
+const News = require("./db/newsModel");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -19,7 +19,19 @@ app.get("/tours", (req, res) => {
       res.status(200).json(tour);
     })
     .catch((err) => {
-      console.log(res)
+      console.log(res);
+      console.log(err);
+      res.status(500).json({ err: err });
+    });
+});
+
+app.get("/news", (req, res) => {
+  News.find()
+    .then((n) => {
+      res.status(200).json(n);
+    })
+    .catch((err) => {
+      console.log(res);
       console.log(err);
       res.status(500).json({ err: err });
     });
