@@ -1,12 +1,7 @@
-import {
-  GET_NEWS_START,
-  GET_NEWS_SUCCESS,
-  GET_NEWS_FAILURE,
-} from "./constants";
+import { GET_NEWS_START } from "./constants";
 
-export function getNewsStart(params) {
+export function getNewsStart() {
   return {
     type: GET_NEWS_START,
-    payload: params,
   };
 }

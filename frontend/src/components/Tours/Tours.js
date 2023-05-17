@@ -9,20 +9,19 @@ const Tours = () => {
   useEffect(() => {
     dispatch(action.getTours());
   }, []);
-  console.log(tours);
   return (
     <div className="tours-container">
       <ul>
-        {tours?.map((t) => {
+        {tours?.map((t, index) => {
           return (
-            <li key={t.id}>
+            <li key={index} >
               <h2>{t.name}</h2>
               <p>{t.date}</p>
               <a href={t.info} target="_blank" rel="noopener noreferrer">
                 <span>I</span>
                 <span>n</span>
                 <span>f</span>
-                <span classname="move">o</span>
+                <span className="move">o</span>
               </a>
             </li>
           );
