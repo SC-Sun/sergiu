@@ -1,12 +1,7 @@
-import {
-  GET_WORK_START,
-  GET_WORK_SUCCESS,
-  GET_WORK_FAILURE,
-} from "./constants";
+import { GET_WORK_START } from "./constants";
 
-export function getWorkStart(params) {
+export function getWorkStart() {
   return {
     type: GET_WORK_START,
-    payload: params,
   };
 }

@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Work.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import * as action from "../Work/redux/action";
 
 const Work = () => {
   const { work, error } = useSelector((state) => state.work);
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(action.getWorkStart());
+  }, []);
   return (
     <div className="work-container">
-      {work.map((m) => {
+      {work?.map((m, index) => {
         return (
-          <div className="work-div" key={m.id}>
+          <div className="work-div" key={index}>
             <h2>{m.name}</h2>
             <p>{m.about}</p>
-            <img src={m.media.photo} alt={m.name} />
+            <img src={m.photo} alt={m.name} />
             <br />
-            <a href={m.media.link} target="_blank" rel="noopener noreferrer">
+            <a href={m.link} target="_blank" rel="noopener noreferrer">
               <span>I</span>
               <span>n</span>
               <span>f</span>

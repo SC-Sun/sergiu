@@ -18,7 +18,7 @@ const Contact = () => {
         <span>M</span>
         <span>a</span>
         <span>i</span>
-        <span classname="move">l</span>
+        <span className="move">l</span>
       </a>
       <br />
       <br />
@@ -33,7 +33,7 @@ const Contact = () => {
           <span>b</span>
           <span>o</span>
           <span>o</span>
-          <span classname="move">k</span>
+          <span className="move">k</span>
         </a>{" "}
       </span>
 
@@ -49,7 +49,7 @@ const Contact = () => {
           <span>g</span>
           <span>r</span>
           <span>a</span>
-          <span classname="move">m</span>
+          <span className="move">m</span>
         </a>{" "}
       </span>
     </div>
