@@ -18,7 +18,7 @@ const Work = () => {
               <span>I</span>
               <span>n</span>
               <span>f</span>
-              <span classname="move">o</span>
+              <span className="move">o</span>
             </a>
             <br />
             <br />
