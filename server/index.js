@@ -6,6 +6,7 @@ const apiPort = 5000;
 const dbConnect = require("./db/dbConnect");
 const Tours = require("./db/tourModel");
 const News = require("./db/newsModel");
+const Bio = require("./db/bioModel");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -36,5 +37,18 @@ app.get("/news", (req, res) => {
       res.status(500).json({ err: err });
     });
 });
+
+app.get("/bio", (req, res) => {
+  Bio.find()
+    .then((n) => {
+      res.status(200).json(n);
+    })
+    .catch((err) => {
+      console.log(res);
+      console.log(err);
+      res.status(500).json({ err: err });
+    });
+});
+
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
