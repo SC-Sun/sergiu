@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./News.css";
 import { useSelector, useDispatch } from "react-redux";
 import * as action from "../News/redux/action";
+import MovingText from "../../helpers/movingText";
 
 const News = () => {
   const { news, error } = useSelector((state) => state.news);
@@ -17,12 +18,12 @@ const News = () => {
           <div key={index}>
             <h2>{u.theme}</h2>
             <p>{u.text}</p>
-            <a href={u.info} target="_blank" rel="noopener noreferrer">
+            <MovingText href={u.info} target="_blank" rel="noopener noreferrer">
               <span>I</span>
               <span>n</span>
               <span>f</span>
               <span className="move">o</span>
-            </a>
+            </MovingText>
           </div>
         );
       })}
