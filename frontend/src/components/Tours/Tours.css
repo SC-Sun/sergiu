@@ -13,24 +13,3 @@
   list-style-type: none;
   padding: 0;
 }
-
-.tours-container a {
-  text-decoration: none;
-  color: var(--white);
-  display: inline-flex;
-  width: 15px;
-  height: auto;
-  animation: move 4000ms alternate infinite cubic-bezier(0.2, 0.65, 0.6, 1);
-}
-.tours-container span {
-  display: flex;
-}
-
-@keyframes move {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
