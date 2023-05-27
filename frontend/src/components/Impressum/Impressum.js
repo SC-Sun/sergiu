@@ -1,7 +1,8 @@
 import React from "react";
 import "./Impressum.css";
-
+import tabTitle from "../../helpers/tabTitle";
 const Impressum = () => {
+  tabTitle("Sergiu Matis | Impressum");
   return (
     <div className="impressum-container">
       <h4>Impressum</h4>

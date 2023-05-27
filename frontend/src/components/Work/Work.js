@@ -3,6 +3,7 @@ import "./Work.css";
 import { useDispatch, useSelector } from "react-redux";
 import * as action from "../Work/redux/action";
 import MovingText from "../../helpers/movingText";
+import tabTitle from "../../helpers/tabTitle";
 
 const Work = () => {
   const { work, error } = useSelector((state) => state.work);
@@ -10,6 +11,7 @@ const Work = () => {
   useEffect(() => {
     dispatch(action.getWorkStart());
   }, []);
+  tabTitle("Sergiu Matis | Work"); 
   return (
     <div className="work-container">
       {work?.map((m, index) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.css";
+import tabTitle from "../../helpers/tabTitle";
 
 const contactMe = {
   text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
@@ -8,6 +9,7 @@ const contactMe = {
   IG: "https://www.instagram.com/sergiu.matis/?hl=de",
 };
 const Contact = () => {
+  tabTitle("Sergiu Matis | Contact");
   return (
     <div className="contact-container">
       <p> {contactMe.text}</p>

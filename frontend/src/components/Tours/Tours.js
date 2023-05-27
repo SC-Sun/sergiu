@@ -3,6 +3,7 @@ import "./Tours.css";
 import { useSelector, useDispatch } from "react-redux";
 import * as action from "../Tours/redux/action";
 import MovingText from "../../helpers/movingText";
+import tabTitle from "../../helpers/tabTitle";
 
 const Tours = () => {
   const { tours, error } = useSelector((state) => state.tours);
@@ -10,6 +11,7 @@ const Tours = () => {
   useEffect(() => {
     dispatch(action.getTours());
   }, []);
+  tabTitle("Sergiu Matis | Tours"); 
   return (
     <div className="tours-container">
       <ul>

@@ -3,6 +3,7 @@ import "./News.css";
 import { useSelector, useDispatch } from "react-redux";
 import * as action from "../News/redux/action";
 import MovingText from "../../helpers/movingText";
+import tabTitle from "../../helpers/tabTitle";
 
 const News = () => {
   const { news, error } = useSelector((state) => state.news);
@@ -10,7 +11,7 @@ const News = () => {
   useEffect(() => {
     dispatch(action.getNewsStart());
   }, []);
-
+  tabTitle("Sergiu Matis | News");
   return (
     <div className="news-container">
       {news?.map((u, index) => {

@@ -7,6 +7,7 @@ import Work from "../Work/Work";
 import Contact from "../Contact/Contact";
 import Impressum from "../Impressum/Impressum";
 import Bio from "../Bio/Bio";
+import tabTitle from "../../helpers/tabTitle";
 
 const Main = () => {
   return (
