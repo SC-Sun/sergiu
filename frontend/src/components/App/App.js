@@ -1,6 +1,6 @@
 import Main from "../Main/Main";
 import Navigation from "../Navigation/Navigation";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./App.css";
 import tabTitle from "../../helpers/tabTitle";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link
+        <NavLink
           to="/"
           className="header-text"
           onClick={() => {
@@ -16,10 +16,10 @@ function App() {
           }}
         >
           <span>Sergiu Matis</span>
-        </Link>
-        <Link to="/bio" className="header-text">
+        </NavLink>
+        <NavLink to="/bio" className="header-text">
           <span>Bio</span>
-        </Link>
+        </NavLink>
       </header>
       <div className="container">
         <div className="left">
@@ -30,9 +30,9 @@ function App() {
         </div>
       </div>
       <footer>
-        <Link className="impressum-text" to="/Impressum">
+        <NavLink className="impressum-text" to="/Impressum">
           <span>Impressum</span>
-        </Link>{" "}
+        </NavLink>{" "}
       </footer>
     </div>
   );

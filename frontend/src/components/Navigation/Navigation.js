@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navigation.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   const navigationLinks = ["News", "Tours", "Work", "Contact"];
@@ -10,7 +10,7 @@ const Navigation = () => {
         {navigationLinks?.map((link, id) => {
           return (
             <li className="list" key={id}>
-              <Link className='listText' to={link}>{link}</Link>
+              <NavLink className='listText' to={link}>{link}</NavLink>
             </li>
           );
         })}

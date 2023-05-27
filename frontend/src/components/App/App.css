@@ -53,6 +53,9 @@
   transition: ease-in-out 0.3s;
   transform: scale(1.1);
 }
+.active {
+  color:var(--white);
+}
 
 @media (max-width: 800px) {
   .container {
